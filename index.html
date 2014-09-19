@@ -1,0 +1,117 @@
+<!doctype html>
+<title></title>
+<meta charset="utf-8">
+
+<style>
+	canvas { border: 1px solid blue; }
+	h4	{ padding-bottom: 0; margin-bottom: 0; }
+</style>
+<script src="conway-game-of-life.js"></script>
+
+<h4>Blinker</h4>
+<canvas id="blinker"></canvas>
+
+<h4>Toad</h4>
+<canvas id="toad"></canvas>
+
+<h4>Beacon</h4>
+<canvas id="beacon"></canvas>
+
+<h4>Pulsar</h4>
+<canvas id="pulsar"></canvas>
+
+<h4>Glider</h4>
+<canvas id="glider"></canvas>
+
+<script>
+	var blinker = [
+		{x: 2, y: 1},
+		{x: 2, y: 2},
+		{x: 2, y: 3}
+	];
+	gol().init(document.getElementById('blinker'), 5, 5, blinker);
+
+	var toad = [
+		{x: 1, y: 3},
+		{x: 2, y: 2},
+		{x: 2, y: 3},
+		{x: 3, y: 2},
+		{x: 3, y: 3},
+		{x: 4, y: 2}
+	];
+	gol().init(document.getElementById('toad'), 6, 6, toad);
+
+	var beacon = [
+		{x: 1, y: 1},
+		{x: 1, y: 2},
+		{x: 2, y: 1},
+		{x: 2, y: 2},
+		{x: 3, y: 3},
+		{x: 3, y: 4},
+		{x: 4, y: 3},
+		{x: 4, y: 4}
+	];
+	gol().init(document.getElementById('beacon'), 6, 6, beacon);
+
+	var pulsar = [
+		{x: 4, y: 2},
+		{x: 5, y: 2},
+		{x: 6, y: 2},
+		{x: 10, y: 2},
+		{x: 11, y: 2},
+		{x: 12, y: 2},
+		{x: 2, y: 4},
+		{x: 2, y: 5},
+		{x: 2, y: 6},
+		{x: 7, y: 4},
+		{x: 7, y: 5},
+		{x: 7, y: 6},
+		{x: 9, y: 4},
+		{x: 9, y: 5},
+		{x: 9, y: 6},
+		{x: 14, y: 4},
+		{x: 14, y: 5},
+		{x: 14, y: 6},
+		{x: 4, y: 7},
+		{x: 5, y: 7},
+		{x: 6, y: 7},
+		{x: 10, y: 7},
+		{x: 11, y: 7},
+		{x: 12, y: 7},
+		{x: 4, y: 9},
+		{x: 5, y: 9},
+		{x: 6, y: 9},
+		{x: 10, y: 9},
+		{x: 11, y: 9},
+		{x: 12, y: 9},
+		{x: 2, y: 10},
+		{x: 2, y: 11},
+		{x: 2, y: 12},
+		{x: 7, y: 10},
+		{x: 7, y: 11},
+		{x: 7, y: 12},
+		{x: 9, y: 10},
+		{x: 9, y: 11},
+		{x: 9, y: 12},
+		{x: 14, y: 10},
+		{x: 14, y: 11},
+		{x: 14, y: 12},
+		{x: 4, y: 14},
+		{x: 5, y: 14},
+		{x: 6, y: 14},
+		{x: 10, y: 14},
+		{x: 11, y: 14},
+		{x: 12, y: 14},
+	];
+	gol().init(document.getElementById('pulsar'), 17, 17, pulsar);
+
+	var glider = [
+		{x: 0, y: 0},
+		{x: 0, y: 2},
+		{x: 1, y: 1},
+		{x: 1, y: 2},
+		{x: 2, y: 1}
+	];
+	gol().init(document.getElementById('glider'), 17, 17, glider);
+</script>
+
